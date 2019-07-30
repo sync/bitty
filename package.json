@@ -5,30 +5,43 @@
   "esy": {
     "build": "dune build -p #{self.name}",
     "release": {
-      "releasedBinaries": ["BittyApp.exe"]
+      "releasedBinaries": [
+        "BittyApp.exe"
+      ]
     }
   },
   "buildDirs": {
     "test": {
-      "require": ["bitty/library", "rely.lib"],
-      "flags": ["-linkall", "-g"]
+      "require": [
+        "bitty/library",
+        "rely.lib"
+      ],
+      "flags": [
+        "-linkall",
+        "-g"
+      ]
     },
     "testExe": {
-      "require": ["bitty/test"],
+      "require": [
+        "bitty/test"
+      ],
       "bin": {
         "RunBittyTests.exe": "RunBittyTests.re"
       }
     },
     "library": {},
     "executable": {
-      "require": ["bitty/library"],
+      "require": [
+        "bitty/library"
+      ],
       "bin": {
         "BittyApp.exe": "BittyApp.re"
       }
     }
   },
   "scripts": {
-    "test": "esy x RunBittyTests.exe"
+    "test": "esy x RunBittyTests.exe",
+    "format": "bash -c 'refmt --in-place {library,executable,test}/*.re'"
   },
   "dependencies": {
     "@opam/dune": "*",
