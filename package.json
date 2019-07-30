@@ -1,0 +1,47 @@
+{
+  "name": "bitty",
+  "version": "0.0.0",
+  "description": "My Project",
+  "esy": {
+    "build": "dune build -p #{self.name}",
+    "release": {
+      "releasedBinaries": ["BittyApp.exe"]
+    }
+  },
+  "buildDirs": {
+    "test": {
+      "require": ["bitty/library", "rely.lib"],
+      "flags": ["-linkall", "-g"]
+    },
+    "testExe": {
+      "require": ["bitty/test"],
+      "bin": {
+        "RunBittyTests.exe": "RunBittyTests.re"
+      }
+    },
+    "library": {},
+    "executable": {
+      "require": ["bitty/library"],
+      "bin": {
+        "BittyApp.exe": "BittyApp.re"
+      }
+    }
+  },
+  "scripts": {
+    "test": "esy x RunBittyTests.exe"
+  },
+  "dependencies": {
+    "@opam/dune": "*",
+    "@esy-ocaml/reason": "*",
+    "refmterr": "*",
+    "ocaml": "4.7.x",
+    "pesy": "*",
+    "@reason-native/rely": "*"
+  },
+  "devDependencies": {
+    "@opam/merlin": "*"
+  },
+  "resolutions": {
+    "pesy": "esy/pesy#3d8a18385e07fa11daabe811814fae3f869ad355"
+  }
+}

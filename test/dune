@@ -1,0 +1,2 @@
+(library (name Test) (public_name bitty.test)
+    (libraries bitty.library rely.lib) (flags -linkall -g)) 

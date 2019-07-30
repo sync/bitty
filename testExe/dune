@@ -1,0 +1,2 @@
+(executable (name RunBittyTests) (public_name RunBittyTests.exe)
+    (libraries bitty.test)) 
