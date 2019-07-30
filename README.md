@@ -1,8 +1,6 @@
 # bitty
 
-
 [![CircleCI](https://circleci.com/gh/yourgithubhandle/bitty/tree/master.svg?style=svg)](https://circleci.com/gh/yourgithubhandle/bitty/tree/master)
-
 
 **Contains the following libraries and executables:**
 
@@ -26,6 +24,7 @@ bitty@0.0.0
 
 ```
 npm install -g esy
+npm install -g pesy@next
 git clone <this-repo>
 esy install
 esy build
@@ -36,7 +35,7 @@ esy build
 After building the project, you can run the main binary that is produced.
 
 ```
-esy x BittyApp.exe 
+esy x BittyApp.exe
 ```
 
 ## Running Tests:
