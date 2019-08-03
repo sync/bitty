@@ -1,6 +1,6 @@
 {
   "name": "bitty",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "My Project",
   "esy": {
     "build": "dune build -p #{self.name}",
